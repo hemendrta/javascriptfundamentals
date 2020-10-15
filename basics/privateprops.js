@@ -39,3 +39,8 @@ module.exports=Person;
 
 const person1=new Person("Sunny","Singh","Chouhan",32,"hemendra.singh.c@outlook.com");
 
+console.log(person1.getPerson())
+
+person1.setContact(7999996891);
+
+console.log(person1.getPerson());
