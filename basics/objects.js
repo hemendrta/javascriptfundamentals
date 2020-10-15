@@ -75,7 +75,11 @@ console.log(employee.getEmployeeDetails());
 
 //Setting the value of data member.
 
+<<<<<<< HEAD
 employee.setEmployeeContactNumber(713967912);
+=======
+employee.setEmployeeContactNumber(823762369);
+>>>>>>> 7bb07313e38f08b8b9bd9a0e9e07d6babbbf1c59
 
 console.table(employee.getEmployeeDetails());
 
