@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/javascriptes6/basics/dommanipulations.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="/javascriptes6/css/style.css">
 </head>
 <body>
-    <div>
-        <h1 class="title1">Welcome Hemendra!!!</h1>
-    </div>
+    
+    <div id="container"></div>
+    <button id="button1">Click Me!!</button>
+
+    <!-- JQuery CDN Link -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JQuery Code -->
+
+    <script>    
+
+        $(document).ready(()=>{
+
+            console.log("This is something which runs at the start of the page itself or initial loading when the document is ready!!!");
+
+        });
+
+    </script>
+    
+    <!-- External Javascript File Import -->
+
+    <script src="/javascriptes6/js/myjs.js"></script>
+
 </body>
 </html>
