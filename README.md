@@ -12,6 +12,10 @@ Maps <br>
 Arrays <br>
 Hoisting <br>
 Scope <br>
+New Keyword <br>
+Inheritance <br>
+Spread and Rest Arguments <br>
+Destructure Data <br>
 API Calling <br>
 Filter and Reduce <br>
 </h5>
