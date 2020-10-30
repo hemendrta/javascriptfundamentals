@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>JQuery Demo Tutorial</title>
+</head>
+<body>
+
+        <div class="header"><h1>This is the header section</h1></div>
+        <button id="hideContent">Hide Content</button>
+        <button id="showContent">Show Content</button>
+        <button id="toggleContent">Toggle Content</button>
+
+    <script>
+
+        $(document).ready(()=>{
+
+            $('#hideContent').click(()=>{
+
+                   $('.header').hide();
+
+            });
+
+            $('#showContent').click(()=>{
+
+                $('.header').show();
+
+            });
+
+            $('#toggleContent').click(()=>{
+
+                $('.header').toggle();
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>
