@@ -18,4 +18,5 @@ Spread and Rest Arguments <br>
 Destructure Data <br>
 API Calling <br>
 Filter and Reduce <br>
+Practice Examples <br>
 </h5>
