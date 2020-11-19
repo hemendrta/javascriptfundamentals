@@ -107,3 +107,126 @@ console.log(closeTo100(10, 20));
 console.log(closeTo100(30, 20));
 console.log(closeTo100(20, 20));
 console.log(closeTo100(50, 20));
+
+console.log("-----------------------------------");
+
+// Count of total even numbers in the array.
+
+const findEvenCount = (arr) => {
+  return arr.filter((ele) => ele % 2 === 0).length;
+};
+
+console.log(findEvenCount([12, 4, 5, 6, 6, 7, 8, 9, 9, 90]));
+console.log(findEvenCount([12, 4, 5, 6, 6, 72, 843, 923, 34, 90]));
+console.log(findEvenCount([12, 4, 54, 69, 635, 8, 9, 9, 90]));
+
+console.log("-----------------------------------");
+
+// Program to find the even numbers upto a given number.
+
+const evenNumberRange = (num) => {
+  const nums = [];
+
+  for (let i = 0; i < num; i++) {
+    nums.push(i);
+  }
+  return nums.filter((number) => number % 2 === 0);
+};
+
+console.log(evenNumberRange(10));
+console.log(evenNumberRange(15));
+console.log(evenNumberRange(2));
+
+console.log("-----------------------------------");
+
+// Check whether is the given array sorted or not.
+
+const checkAscending = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i + 1] > arr[i]) {
+      return true;
+    }
+
+    return false;
+  }
+};
+
+console.log(checkAscending([1, 2, 3, 4, 5]));
+console.log(checkAscending([10, 2, 3, 4, 5]));
+
+console.log("-----------------------------------");
+
+// Largest even number from an array of integers.
+
+const largestEven = (arr) => {
+  return Math.max(...arr.filter((num) => num % 2 === 0));
+};
+
+console.log(largestEven([1, 2, 3, 4, 5]));
+console.log(largestEven([10, 2, 3, 4, 5]));
+
+console.log("-----------------------------------");
+
+// Replace first digit in a string (should contain at least digit) with $ character.
+
+const replaceDigit = (str) => str.replace(/[0-9]/, "$");
+
+console.log(replaceDigit("99hemendra"));
+console.log(replaceDigit("em78sun765endra"));
+
+// Check whether the year is leap year or not
+
+const isLeapYear = (year) => year % 4 === 0;
+
+console.log(isLeapYear(2016));
+console.log(isLeapYear(2017));
+console.log(isLeapYear(2018));
+console.log(isLeapYear(2019));
+console.log(isLeapYear(2020));
+
+console.log("-----------------------------------");
+
+// Compare two objects to determine if the first one contains the same properties as the second one (which may also have additional properties).
+
+const obj1 = { a: 1, b: 2, c: 3 };
+const obj2 = { a: 1, b: 2, d: 3 };
+const obj3 = { a: 4, b: 5, c: 6 };
+const obj4 = { a: 4, b: 5, c: 6, d: 10 };
+
+// false
+// true
+// true
+
+const matchObject = (objA, objB) => {
+  return Object.keys(objA).every((key) => objB[key]);
+};
+
+console.log(matchObject(obj1, obj2));
+console.log(matchObject(obj1, obj4));
+console.log(matchObject(obj2, obj4));
+
+console.log("-----------------------------------");
+
+// Convert a CSV (Comma Seperated Values) string to a 2D array. A new line indicates a new row in the array.
+
+// abc,def,ghi
+// jkl,mno,pqr
+// stu,vwx,yz
+
+const convertCSV = (CSVString) => {
+
+ return CSVString.split('\n').map(row => row.split(','));
+
+}
+
+const str=`abc,def,ghi
+jkl,mno,pqr
+stu,vwx,yz`;
+
+console.log(convertCSV(str));
+
+console.log("-----------------------------------");
+
+// Generate hexadecimal color code.
+
+console.log(Math.random());
