@@ -200,10 +200,12 @@ const obj4 = { a: 4, b: 5, c: 6, d: 10 };
 const matchObject = (objA, objB) => {
   return Object.keys(objA).every((key) => objB[key]);
 };
-
+console.log("--------------------");
 console.log(matchObject(obj1, obj2));
 console.log(matchObject(obj1, obj4));
 console.log(matchObject(obj2, obj4));
+console.log(matchObject(obj3, obj4));
+console.log(matchObject(obj4, obj3));
 
 console.log("-----------------------------------");
 
@@ -211,15 +213,21 @@ console.log("-----------------------------------");
 
 // abc,def,ghi
 // jkl,mno,pqr
-// stu,vwx,yz
+// stu,vwx,
+
+// Output:
+
+// [
+//   [ 'abc', 'def', 'ghi' ],
+//   [ 'jkl', 'mno', 'pqr' ],
+//   [ 'stu', 'vwx', 'yz' ]
+// ]
 
 const convertCSV = (CSVString) => {
+  return CSVString.split("\n").map((row) => row.split(","));
+};
 
- return CSVString.split('\n').map(row => row.split(','));
-
-}
-
-const str=`abc,def,ghi
+const str = `abc,def,ghi
 jkl,mno,pqr
 stu,vwx,yz`;
 
@@ -229,4 +237,48 @@ console.log("-----------------------------------");
 
 // Generate hexadecimal color code.
 
-console.log(Math.random());
+// Helper function to generate random hexadecimal number:
+
+const generateHex = () => {
+  return Math.floor(Math.random() * 16).toString(16);
+};
+
+console.log(generateHex());
+
+const getHexColor = () =>
+  "#" + Array.from({ length: 6 }).map(generateHex).join("");
+
+console.log(getHexColor());
+console.log(getHexColor());
+console.log(getHexColor());
+console.log(getHexColor());
+console.log(getHexColor());
+
+console.log("-----------------------------------");
+
+// Create a function that returns a passed string with letters in alphabetical order.
+
+// Example:
+
+// Input String :  "hemendra"
+// Output String : "adeehmnr"
+
+const sortString = (str1) => str1.split("").sort().join("");
+
+console.log("-----------------------------------");
+
+// Count the number of vowels in a string.
+
+let letters = ["a", "e", "i", "o", "u"];
+const checkVoewlsCount = (checkString) =>
+  checkString.split("").filter((alphabet) => letters.indexOf(alphabet) > -1)
+    .length;
+
+console.log(checkVoewlsCount("hemendra singh chouhan"));
+console.log(checkVoewlsCount("nisha singh chouhan"));
+console.log(checkVoewlsCount("subhash singh chouhan"));
+console.log(checkVoewlsCount("aditi singh chouhan"));
+console.log(checkVoewlsCount("singh chouhan"));
+console.log(checkVoewlsCount("hemendra"));
+
+console.log("-----------------------------------");
