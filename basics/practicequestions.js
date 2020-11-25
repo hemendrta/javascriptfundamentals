@@ -399,3 +399,26 @@ const sortingAge = (person) =>
   );
 
 console.log(sortingAge(person));
+
+// Redirect to a page using javascript (This is going to keep the history)
+
+window.location.href='Pageurl';
+
+// Redirect to a page using javascript (This will not keep the history)
+
+window.location.replace('Pageurl');
+
+// Reload a page using javascript. True basically idicates that we have the page from the server.
+
+window.location.reload(true);
+
+// Reload a page using javascript. False basically means that we are getting the page from the cache.
+
+window.location.reload(false);
+
+//Get current page url
+
+document.URL;
+window.location.href;
+new URL(window.location.href);
+
